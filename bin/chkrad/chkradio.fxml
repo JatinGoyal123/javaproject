@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="500.0" minWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="chkrad.chkradioController">
+   <children>
+      <CheckBox fx:id="chkall" layoutX="42.0" layoutY="91.0" mnemonicParsing="false" onAction="#dochkall" text="Select All" />
+      <CheckBox fx:id="chkbook" layoutX="42.0" layoutY="125.0" mnemonicParsing="false" onAction="#doBook" text="Books-500" />
+      <CheckBox fx:id="chkmob" layoutX="42.0" layoutY="171.0" mnemonicParsing="false" onAction="#doMob" text="Mobile-25000" />
+      <CheckBox fx:id="chklap" layoutX="42.0" layoutY="212.0" mnemonicParsing="false" onAction="#doLap" text="Laptop-70000" />
+      <RadioButton fx:id="radio10" layoutX="86.0" layoutY="250.0" mnemonicParsing="false" text="10% Residential">
+         <toggleGroup>
+            <ToggleGroup fx:id="discount" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radio20" layoutX="318.0" layoutY="250.0" mnemonicParsing="false" text="20% Commercial" toggleGroup="$discount" />
+      <Label layoutX="71.0" layoutY="317.0" text="Discount" />
+      <Label layoutX="71.0" layoutY="370.0" text="Total" />
+      <Label layoutX="71.0" layoutY="428.0" text="Net Bill" />
+      <TextField fx:id="txtDiscount" disable="true" layoutX="224.0" layoutY="313.0" />
+      <TextField fx:id="txtTotal" disable="true" layoutX="224.0" layoutY="366.0" />
+      <TextField fx:id="txtBill" disable="true" layoutX="224.0" layoutY="424.0" />
+      <Button fx:id="getBill" layoutX="335.0" layoutY="113.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#doBill" prefHeight="38.0" prefWidth="120.0" text="Get BILL" textFill="#cc1e1e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
